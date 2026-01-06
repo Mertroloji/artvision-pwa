@@ -1,0 +1,20 @@
+[
+  {
+    "id": 436535,
+    "title": "Starry Night",
+    "artist": "Vincent van Gogh",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/e/ea/The_Starry_Night.jpg"
+  },
+  {
+    "id": 436121,
+    "title": "Mona Lisa",
+    "artist": "Leonardo da Vinci",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Mona_Lisa.jpg"
+  },
+  {
+    "id": 437980,
+    "title": "The Scream",
+    "artist": "Edvard Munch",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/f/f4/The_Scream.jpg"
+  }
+]
