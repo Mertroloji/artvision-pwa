@@ -13,7 +13,7 @@ Uygulama, The Met Museum Collection API kullanılarak sanat eserlerini dijital o
 ---
 
 ## 🎥 Demo Video
-🔗 (Google Drive veya YouTube video linki buraya)
+🔗 (https://drive.google.com/file/d/1FPH3cnfww13cBC96c4iICVHsm05mI5M-/view?usp=drive_link)]
 
 ---
 
@@ -148,4 +148,5 @@ Uygulama arayüzünde aşağıdaki durumlar ele alınmıştır:
 
 Bu proje bireysel olarak hazırlanmıştır ve dönem sonu (final) uygulaması olarak teslim edilmiştir.  
 Proje; **PWA**, **API kullanımı**, **offline çalışma**, **kurulabilirlik**, ve **çok sayfalı yapı** kriterlerini karşılayacak şekilde geliştirilmiştir.
+
 
