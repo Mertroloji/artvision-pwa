@@ -8,12 +8,12 @@ Uygulama, The Met Museum Collection API kullanılarak sanat eserlerini dijital o
 ---
 
 ## 🌐 Canlı Demo
-🔗 (Buraya GitHub Pages veya Netlify linkini ekle)
+🔗 https://mertroloji.github.io/artvision-pwa/
 
 ---
 
 ## 🎥 Demo Video
-🔗 (Google Form’a yüklediğin video linki)
+🔗 (Google Drive veya YouTube video linki buraya)
 
 ---
 
@@ -31,7 +31,7 @@ Ziyaretçiler:
 ## 📄 Sayfa Yapısı (Multi-Page)
 
 - **index.html**  
-  Ana sayfa, galeri tanıtımı ve öne çıkan eserler
+  Ana sayfa, galeri tanıtımı ve arama alanı
 
 - **products.html**  
   Sanat eserlerinin listelendiği ana veri sayfası
@@ -48,22 +48,30 @@ Ziyaretçiler:
 
 ---
 
+## 📸 Ekran Görüntüleri
+
+### Ana Sayfa
+![Ana Sayfa](screenshots/home.png)
+
+### Eser Detay Sayfası
+![Detay Sayfası](screenshots/detail.png)
+
+### Offline Senaryo
+![Offline Senaryo](screenshots/offline.png)
+
+---
+
 ## 🔌 Kullanılan API
 **The Met Museum Collection API**  
 🔗 https://metmuseum.github.io/
 
-### Kullanılan Endpointler:
-- Arama / Listeleme:
-https://collectionapi.metmuseum.org/public/collection/v1/search?q=art
+### Kullanılan Endpointler
+- Arama / Listeleme:  
+  `https://collectionapi.metmuseum.org/public/collection/v1/search?q=art`
+- Eser Detayı:  
+  `https://collectionapi.metmuseum.org/public/collection/v1/objects/{id}`
 
-- Eser Detayı:
-https://collectionapi.metmuseum.org/public/collection/v1/objects/{id}
-
-
--API, fetch() yöntemi ile kullanılmıştır.
--API, hem eser arama/listeme hem de seçilen eserin detay bilgisini getirmek amacıyla
-iki farklı endpoint üzerinden kullanılmıştır.
-
+API, **fetch() yöntemi** ile kullanılmıştır ve hem arama/listeleme hem de seçilen eserin detay bilgisini almak için iki farklı endpoint ile çalışmaktadır.
 
 ---
 
@@ -78,7 +86,7 @@ iki farklı endpoint üzerinden kullanılmıştır.
 
 ## 📲 PWA Özellikleri
 
-### ✔️ Manifest
+### ✔️ Manifest (`manifest.json`)
 - name
 - short_name
 - start_url
@@ -86,37 +94,37 @@ iki farklı endpoint üzerinden kullanılmıştır.
 - icons
 - theme_color
 
-### ✔️ Service Worker
+### ✔️ Service Worker (`service-worker.js`)
 - App Shell Cache (HTML, CSS, JS, icon)
-- Offline fallback (offline.html)
--Offline durumda kullanıcı offline.html sayfasına yönlendirilir.
-
+- Offline fallback (`offline.html`)
+- Örnek JSON fallback (`data/sample.json`)
 
 ### ✔️ Kurulabilirlik
-Uygulama, tarayıcı üzerinden **install edilebilir** ve standalone modda çalışır.
+Uygulama tarayıcı üzerinden **install edilebilir** ve standalone modda çalışır.
 
 ---
 
 ## 🔌 Offline Çalışma & Plan B
 
-Kullanıcının internet bağlantısı olmadığında:
+Public API erişilemediğinde:
 - Canlı API isteği başarısız olur
-- Otomatik olarak `/data/sample.json` dosyasına geçilir
-- Ekranda şu uyarı gösterilir:
+- `/data/sample.json` dosyasından örnek veri gösterilir
+- Kullanıcıya şu uyarı gösterilir:
 
 > **“Canlı API erişilemiyor, örnek veri gösteriliyor.”**
 
 Bu sayede uygulama:
 - Çökmez
-- Kullanıcıyı bilgilendirir
-- Offline senaryoyu başarıyla yönetir
+- Kullanıcı bilgilendirilir
+- Offline senaryosu başarıyla yönetilir
 
-⚠️ Uygulama sadece JSON dosyası ile çalışmamaktadır.  
+⚠️ Uygulama sadece JSON dosyasıyla çalışmaz.  
 Online durumda gerçek API kullanılmaktadır.
 
 ---
 
 ## ⏳ Durum Yönetimi
+
 Uygulama arayüzünde aşağıdaki durumlar ele alınmıştır:
 - Yükleniyor (loading)
 - Boş veri durumu
@@ -125,6 +133,7 @@ Uygulama arayüzünde aşağıdaki durumlar ele alınmıştır:
 ---
 
 ## 🛠️ Kullanılan Teknolojiler
+
 - HTML5
 - CSS3
 - JavaScript (Vanilla JS)
@@ -136,18 +145,7 @@ Uygulama arayüzünde aşağıdaki durumlar ele alınmıştır:
 ---
 
 ## 📌 Not
-Bu proje bireysel olarak hazırlanmıştır ve dönem sonu (final) uygulaması olarak teslim edilmiştir.
-📌 Bu proje, Web Tabanlı Mobil Uygulama Geliştirme dersi kapsamında
-PWA, API kullanımı, offline çalışma ve kurulum kriterlerini karşılayacak şekilde geliştirilmiştir.
 
-## 📸 Ekran Görüntüleri
-
-### Ana Sayfa
-![Ana Sayfa](screenshots/home.png)
-
-### Eser Detay Sayfası
-![Detay Sayfası](screenshots/detail.png)
-
-### Offline Senaryo
-![Offline Senaryo](screenshots/offline.png)
+Bu proje bireysel olarak hazırlanmıştır ve dönem sonu (final) uygulaması olarak teslim edilmiştir.  
+Proje; **PWA**, **API kullanımı**, **offline çalışma**, **kurulabilirlik**, ve **çok sayfalı yapı** kriterlerini karşılayacak şekilde geliştirilmiştir.
 
